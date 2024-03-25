@@ -11,9 +11,13 @@ app = Flask(__name__)
 def charts():
     countByCategoryPlot = ch.getCountByCategoryPlot()
 
-    avgViewsByCategoryPlot = ch.getAvgByCategoriesPlot()
+    avgViewsByCategoryPlot = ch.getAvgViewsByCategoriesPlot()
+    
+    avgLikesByCategoryPlot = ch.getAvgLikesByCategoriesPlot()
 
-    return render_template('charts.html', countByCategoryPlot=countByCategoryPlot, avgViewsByCategoryPlot=avgViewsByCategoryPlot)
+    avgCommentsByCategoryPlot = ch.getAvgCommentsByCategoriesPlot()
+
+    return render_template('charts.html', countByCategoryPlot=countByCategoryPlot, avgViewsByCategoryPlot=avgViewsByCategoryPlot, avgLikesByCategoryPlot=avgLikesByCategoryPlot, avgCommentsByCategoryPlot=avgCommentsByCategoryPlot)
 
 @app.route('/')
 def home():

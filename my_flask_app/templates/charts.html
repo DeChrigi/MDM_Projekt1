@@ -18,19 +18,23 @@
     <div class="row">
       <div class="col border">
         <div style="width: 100%; height: 100%">
+          <h4>Anzahl Videos nach Kategorie</h4>
           {{ countByCategoryPlot|safe }}
         </div>
       </div>
       <div class="col border">
+        <h4>durchschnittliche Anzahl Views nach Kategorie</h4>
         {{ avgViewsByCategoryPlot|safe }}
       </div>
     </div>
     <div class="row">
       <div class="col border">
-        1 of 2
+        <h4>durchschnittliche Anzahl Likes nach Kategorie</h4>
+        {{ avgLikesByCategoryPlot|safe }}
       </div>
       <div class="col border">
-        2 of 2
+        <h4>durchschnittliche Anzahl Kommentare nach Kategorie</h4>
+        {{ avgCommentsByCategoryPlot|safe }}
       </div>
     </div>
   </div>

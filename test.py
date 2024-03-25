@@ -1,7 +1,4 @@
-import my_flask_app.ApiHandler as ap
-import my_flask_app.DBHandler as db
-import pandas
+import my_flask_app.ApiHandler as aph
+import my_flask_app.ModelHandler as mdh
 
-df = db.getMostPopularVideosByCountryAll()
-
-print(df)
+mdh.test()
