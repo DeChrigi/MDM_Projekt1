@@ -2,9 +2,10 @@
 from dotenv import load_dotenv
 import os
 import pandas as pd
-from . import ApiHandler 
+import ApiHandler 
 from sqlalchemy import create_engine
 import urllib
+import sys
 #----------------Imports----------------
 
 #----------------Initialize----------------
