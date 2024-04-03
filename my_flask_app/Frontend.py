@@ -15,7 +15,7 @@ app = Flask(__name__)
 # init app, load model from storage
 print("*** Init and load model ***")
 if os.getenv("AZURE_STORAGE_CONNECTION_STRING") != None:
-    azureStorageConnectionString = os.environ['AZURE_STORAGE_CONNECTION_STRING']
+    azureStorageConnectionString = os.getenv("AZURE_STORAGE_CONNECTION_STRING") 
     blob_service_client = BlobServiceClient.from_connection_string(azureStorageConnectionString)
 
     print("fetching blob containers...")
@@ -101,4 +101,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port="80")
