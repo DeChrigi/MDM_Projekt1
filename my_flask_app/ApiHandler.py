@@ -10,7 +10,7 @@ import isodate
 
 #----------------Initialize----------------
 load_dotenv()
-localDevKey = os.getenv("DEVELOPER_KEY")
+localDevKey = os.environ["DEVELOPER_KEY"]
 youtube_api = build('youtube', 'v3', developerKey=localDevKey)
 #----------------Initialize----------------
 
