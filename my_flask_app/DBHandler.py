@@ -10,10 +10,10 @@ import sys
 
 #----------------Initialize----------------
 load_dotenv()
-server = os.getenv("DB_SERVER_NAME")
-database = os.getenv("DB_NAME")
-username = os.getenv("DB_USERNAME")
-password = os.getenv("DB_PASSWORD")
+server = os.environ["DB_SERVER_NAME"]
+database = os.environ["DB_NAME"]
+username = os.environ["DB_USERNAME"]
+password = os.environ["DB_PASSWORD"]
 driver= '{ODBC Driver 18 for SQL Server}' # Hier den Treiber entsprechend anpassen
 
 # Erstelle die Verbindungszeichenkette
