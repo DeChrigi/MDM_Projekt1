@@ -1,4 +1,11 @@
 name: build and upload model
+env:
+  DEVELOPER_KEY: ${{ secrets.DEVELOPER_KEY }}
+  DB_SERVER_NAME: ${{ secrets.DB_SERVER_NAME }}
+  DB_NAME: ${{ secrets.DB_NAME }}
+  DB_USERNAME: ${{ secrets.DB_USERNAME }}
+  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+  AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
 
 on:
   push:
