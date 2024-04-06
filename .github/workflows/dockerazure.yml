@@ -29,3 +29,11 @@ jobs:
 
       - name: Push Docker Image
         run: docker push schwech7/youtubemodel:latest
+
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          auth-type: IDENTITY          
+          tenant-id: 5d1a9f9d-201f-4a10-b983-451cf65cbc1e
+          subscription-id: 3f049f0c-2b48-46d9-a203-eed24638bd16
+          enable-AzPSSession: true
