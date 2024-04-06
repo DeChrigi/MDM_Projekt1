@@ -29,6 +29,3 @@ jobs:
 
       - name: Push Docker Image
         run: docker push schwech7/youtubemodel:latest
-
-      - name: Log in to Azure
-        run: az login
